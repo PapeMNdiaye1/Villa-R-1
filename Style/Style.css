@@ -102,6 +102,7 @@ html {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   border: .5em solid #f1f1f1;
+  display: none;
 }
 
 .the_info ion-icon {
