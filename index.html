@@ -83,6 +83,7 @@ de haut standing" />
             <img id="Scene-25" src="./Style/Images/Scene-25.jpg">
             <img id="Scene-26" src="./Style/Images/Scene-26.jpg">
             <img id="Scene-27" src="./Style/Images/Scene-27.jpg">
+            <img id="Scene-28" src="./Style/Images/Scene-28.jpg">
 
         </a-assets>
         <a-sound position="0 15 0" sound="src: #the_sound; autoplay: true; loop: true" allow="autoplay"></a-sound>
@@ -640,6 +641,15 @@ de haut standing" />
                 position="-1.93474 -0.7495 -1.92244" rotation="-83.06226451791058 136.2969191791056 159.3498760661943"
                 the_dote="Name_of_dote: Dote-24 ; Group_to_activate: Group-24; The_rotation: 0">
             </a-plane>
+            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
+                position="-1.93474 -0.7495 -1.92244" rotation="-83.06226451791058 136.2969191791056 159.3498760661943"
+                the_dote="Name_of_dote: Dote-24 ; Group_to_activate: Group-24; The_rotation: 0">
+            </a-plane>
+
+            <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
+                position="1.58035 -1.59495 -2.1286" rotation="-80.01928566797078 -120.2529549998523 55.31105371074915"
+                the_dote="Name_of_dote: Dote-28 ; Group_to_activate: Group-28; The_rotation: 0">
+            </a-plane>
 
         </a-entity>
         <!-- Group-26 -->
@@ -658,12 +668,13 @@ de haut standing" />
         </a-entity>
         <!-- Group-27 -->
 
-        <a-entity scale="0 0 0" class="groups" id="Group-27" visible="false">
+        <a-entity scale="0 0 0" class="groups" id="Group-28" visible="false">
 
             <a-plane data-clickable class="Dote" material="src: #Arrow-1; transparent:true"
-                position="1.02678 -0.7495 -2.31331" rotation="-82.48816080718949 -131.91092725737917 67.10195217674635"
-                the_dote="Name_of_dote: Dote-26 ; Group_to_activate: Group-26; The_rotation: 0">
+                position="-0.68272 -0.7495 3.18951" rotation="-83.17456424575622 137.28928208027222 158.35063767148614"
+                the_dote="Name_of_dote: Dote-25 ; Group_to_activate: Group-25; The_rotation: 0">
             </a-plane>
+
 
 
         </a-entity>
@@ -796,6 +807,9 @@ de haut standing" />
                                 break;
                             case 'Dote-27':
                                 the_sky.setAttribute('src', '#Scene-27')
+                                break;
+                            case 'Dote-28':
+                                the_sky.setAttribute('src', '#Scene-28')
                                 break;
                             default:
                                 break;
