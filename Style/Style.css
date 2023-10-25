@@ -1,3 +1,7 @@
+.a-enter-ar {
+  display: none;
+}
+
 * {
   margin: 0em;
   padding: 0em;
@@ -185,7 +189,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: .2em;
   bottom: calc(2% + 0em);
   right: calc(2% + 4em);
   z-index: 10;
