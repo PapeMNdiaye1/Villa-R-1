@@ -1576,11 +1576,12 @@
                 this.el.setAttribute('event-set__mouseenter', "scale: 1.1 1.1 1.1 ; opacity : 1")
                 this.el.addEventListener('click', (theDote) => {
 
-                    the_sky.setAttribute('rotation', `0 ${TheRotation} 0`)
 
                     theBlachHover.style.transitionDelay = '0s , 0s';
                     theBlachHover.style.opacity = '1';
                     theBlachHover.style.height = '100vh';
+
+
 
                     setTimeout(() => {
                         theBlachHover.style.transitionDelay = '0s , .6s';
@@ -1793,6 +1794,7 @@
                         the_group_to_activate.setAttribute('visible', 'true')
                         the_group_to_activate.setAttribute('scale', '1 1 1')
 
+                        the_sky.setAttribute('rotation', `0 ${TheRotation} 0`)
                         theBlachHover.style.opacity = '0';
                         theBlachHover.style.height = '0vh';
 
