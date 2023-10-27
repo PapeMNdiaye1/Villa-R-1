@@ -28,21 +28,30 @@
     <div class="the_description">
     </div>
 
+    <div class='hover_loader_container'>
+        <div class='hover_loader'>
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
     <a class="link_to_archviz" href="https://archviz-dakar.com/" target="_blank">
     </a>
 
-    <div class="the_info">
+    <!-- <div class="the_info">
         <ion-icon name="alert-outline"></ion-icon>
         <ion-icon name="close-outline"></ion-icon>
-    </div>
+    </div> -->
 
 
     <div class="the_blach_hover">
 
     </div>
 
-    <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse"
-        loading-screen="dotsColor:black; backgroundColor: #f1f1f1 ">
+    <a-scene id="the_scene" the_scene cursor="rayOrigin: mouse" loading-screen="enabled:false">
 
         <a-sky id="image-360" radius="500" rotation="0 0 0" src="#Scene-0" look-controls-invert-y="false"
             animation__fade="property: components.material.material.color; type: color;  startEvents: fade"
@@ -1558,10 +1567,14 @@
         <!-- ############################################################ -->
     </a-scene>
     <script>
+        let loaderContainer = document.querySelector('.hover_loader_container')
+
         let groups = document.querySelectorAll('.groups')
         let the_sky = document.querySelector('#image-360')
         let the_cursor = document.querySelector('.a-mouse-cursor-hover')
         let theBlachHover = document.querySelector('.the_blach_hover')
+        let img_1 = document.querySelector('#Scene-1')
+
 
         AFRAME.registerComponent('the_dote', {
             schema: { Name_of_dote: { type: 'string', default: '#Name', }, Group_to_activate: { type: 'string', default: '#Position', }, The_rotation: { type: 'string', default: '0', } },
@@ -1803,68 +1816,18 @@
                 });
             }
         });
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        const theInt = setInterval(intFunc, 4000)
 
-    <!-- <script>
-        let groups = document.querySelectorAll('.groups')
-        let theInfo = document.querySelector('.the_info')
-        let theDescription = document.querySelector('.the_description')
-        let the_sky = document.querySelector('#image-360')
-        let the_cursor = document.querySelector('.a-mouse-cursor-hover')
-        let theBlachHover = document.querySelector('.the_blach_hover')
-
-        theInfo.addEventListener('click', () => {
-            if (theInfo.classList.length === 1) {
-                theInfo.classList.add("the_info_active")
-                theDescription.style.bottom = '8%';
+        function intFunc() {
+            if (img_1.complete) {
+                loaderContainer.style.display = "none"
+                console.log(img_1.complete);
+                clearInterval(theInt);
             } else {
-                theDescription.style.bottom = '';
-                theInfo.classList.remove("the_info_active")
+                console.log(img_1.complete);
             }
-        })
-
-        AFRAME.registerComponent('the_dote', {
-            schema: { Name_of_dote: { type: 'string', default: '#Name', }, Group_to_activate: { type: 'string', default: '#Position', }, The_rotation: { type: 'string', default: '0', } },
-
-            init: function () {
-                var stringToLog = this.data;
-                let Dote_Name = this.data.Name_of_dote
-                let Group_to_activate = this.data.Group_to_activate
-                let TheRotation = this.data.The_rotation
-                let The_Arrow = this.el
-                this.el.setAttribute('color', '#fff')
-                this.el.setAttribute('opacity', '0.5')
-                this.el.setAttribute('event-set__mouseenter', "scale: 1.1 1.1 1.1 ; opacity : 1;  color: #fff")
-                this.el.setAttribute('event-set__mouseleave', "scale: 0.9 0.9 0.9 ; opacity : 0.5 ;  color: #fff")
-                this.el.addEventListener('click', (theDote) => {
-
-                    theBlachHover.style.transitionDelay = '0s , 0s';
-                    theBlachHover.style.opacity = '1';
-                    theBlachHover.style.height = '100vh';
-                    setTimeout(() => {
-                        theBlachHover.style.transitionDelay = '0s , .3s';
-                        the_sky.setAttribute('src', `#Scene-${Dote_Name.substring(5)}`)
-                        let the_group_to_activate = document.querySelector(`#${Group_to_activate}`)
-
-                        groups.forEach(group => {
-                            group.setAttribute('visible', 'false')
-                            group.setAttribute('scale', '0 0 0')
-                        });
-                        the_sky.setAttribute('rotation', `0 ${TheRotation} 0`)
-                        the_group_to_activate.setAttribute('visible', 'true')
-                        the_group_to_activate.setAttribute('scale', '1 1 1')
-
-                        theBlachHover.style.opacity = '0';
-                        theBlachHover.style.height = '0vh';
-
-                    }, 500);
-
-                });
-            }
-        });
-    </script> -->
+        }
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
