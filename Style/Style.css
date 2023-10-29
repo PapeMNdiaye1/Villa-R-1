@@ -286,7 +286,9 @@ html {
 .link_to_archviz {
   width: 1.5em;
   height: 1.5em;
-  position: absolute;
+  position: fixed;
+  bottom: calc(2% + 0em);
+  left: calc(2% + 0em);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,12 +298,9 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: calc(2% + 0em);
-  right: calc(2% + 0em);
   z-index: 10;
   padding: .3em;
   color: #f1f1f1;
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   text-decoration: none;
   background-image: url("./Images/PNG/favicon.png");
