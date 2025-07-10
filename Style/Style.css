@@ -12,6 +12,10 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+.a-dialog {
+  background-color: rgba(241, 241, 241, 0.8);
+}
+
 .a-dialog-allow-button {
   background-color: black;
   color: #f1f1f1;
@@ -23,7 +27,7 @@ html {
 }
 
 .a-dialog-ok-button {
-  background-color: rgba(241, 241, 241, 0.8);
+  background-color: black;
   color: #f1f1f1;
 }
 
