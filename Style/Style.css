@@ -16,8 +16,9 @@ html {
 }
 
 .a-dialog {
-  background-color: rgba(241, 241, 241, 0.8);
+  background-color: rgba(241, 241, 241, 0.9);
   font-family: "Ubuntu", sans-serif;
+  border-radius: 50%;
 }
 
 .a-dialog-allow-button {
