@@ -2425,6 +2425,20 @@
       let theBlachHover = document.querySelector(".the_blach_hover");
       let img_1 = document.querySelector("#Scene-1");
 
+      const setStrat = (theStrat) => {
+        the_sky.setAttribute("src", `#Scene-${theStrat}`);
+        let the_group_to_activate = document.querySelector(
+          `#Group-${theStrat}`
+        );
+        groups.forEach((group) => {
+          group.setAttribute("visible", "false");
+          group.setAttribute("scale", "0 0 0");
+        });
+        the_group_to_activate.setAttribute("visible", "true");
+        the_group_to_activate.setAttribute("scale", "1 1 1");
+      };
+      setStrat(36);
+
       AFRAME.registerComponent("the_dote", {
         schema: {
           Name_of_dote: { type: "string", default: "#Name" },
@@ -2609,7 +2623,13 @@
                   the_sky.setAttribute("src", "#Scene-50");
                   break;
                 case "Dote-51":
-                  the_sky.setAttribute("src", "#Scene-51");
+                  the_sky.setAttribute("src", "#Scene-50");
+                  break;
+                case "Dote-52":
+                  the_sky.setAttribute("src", "#Scene-52");
+                  break;
+                case "Dote-53":
+                  the_sky.setAttribute("src", "#Scene-53");
                   break;
                 case "Dote-54":
                   the_sky.setAttribute("src", "#Scene-54");
