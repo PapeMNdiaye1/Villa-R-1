@@ -18,12 +18,12 @@ html {
 .a-dialog {
   background-color: rgba(241, 241, 241, 0.9);
   font-family: "Ubuntu", sans-serif;
-  border-radius: 50%;
 }
 
 .a-dialog-allow-button {
   background-color: black;
   color: #f1f1f1;
+  border-radius: 50%;
 }
 
 .a-dialog-deny-button {
