@@ -14,14 +14,17 @@ html {
 
 .a-dialog-allow-button {
   background-color: black;
+  color: #f1f1f1;
 }
 
 .a-dialog-deny-button {
   background-color: gray;
+  color: #f1f1f1;
 }
 
 .a-dialog-ok-button {
-  background-color: #f1f1f1;
+  background-color: rgba(241, 241, 241, 0.8);
+  color: #f1f1f1;
 }
 
 .hover_loader_container {
